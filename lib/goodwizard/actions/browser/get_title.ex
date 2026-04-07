@@ -1,5 +1,5 @@
 defmodule Goodwizard.Actions.Browser.GetTitle do
-  @moduledoc "Serialized wrapper around `JidoBrowser.Actions.GetTitle`."
+  @moduledoc "Serialized wrapper around `Jido.Browser.Actions.GetTitle`."
 
   use Jido.Action,
     name: "browser_get_title",
@@ -15,5 +15,5 @@ defmodule Goodwizard.Actions.Browser.GetTitle do
 
   @impl true
   def run(params, context),
-    do: Helpers.run_serialized(JidoBrowser.Actions.GetTitle, params, context)
+    do: Helpers.run_serialized(Jido.Browser.Actions.GetTitle, params, context)
 end

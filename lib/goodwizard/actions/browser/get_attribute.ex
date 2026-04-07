@@ -1,5 +1,5 @@
 defmodule Goodwizard.Actions.Browser.GetAttribute do
-  @moduledoc "Serialized wrapper around `JidoBrowser.Actions.GetAttribute`."
+  @moduledoc "Serialized wrapper around `Jido.Browser.Actions.GetAttribute`."
 
   use Jido.Action,
     name: "browser_get_attribute",
@@ -16,5 +16,5 @@ defmodule Goodwizard.Actions.Browser.GetAttribute do
 
   @impl true
   def run(params, context),
-    do: Helpers.run_serialized(JidoBrowser.Actions.GetAttribute, params, context)
+    do: Helpers.run_serialized(Jido.Browser.Actions.GetAttribute, params, context)
 end

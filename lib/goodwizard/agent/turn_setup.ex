@@ -70,14 +70,14 @@ defmodule Goodwizard.Agent.TurnSetup do
 
   defp ensure_browser_session(agent) do
     case get_in(agent.state, [:browser, :session]) do
-      %JidoBrowser.Session{} = session ->
+      %Jido.Browser.Session{} = session ->
         BrowserSessionStore.put(agent.id, session)
         {agent, session}
 
       _ ->
         stop_stale_daemon()
 
-        case JidoBrowser.start_session(headless: true) do
+        case Jido.Browser.start_session(headless: true) do
           {:ok, session} ->
             agent = %{agent | state: put_in(agent.state, [:browser, :session], session)}
             BrowserSessionStore.put(agent.id, session)

@@ -1,6 +1,6 @@
 defmodule Goodwizard.Actions.Browser.Navigate do
   @moduledoc """
-  Wrapper around `JidoBrowser.Actions.Navigate` that serializes execution
+  Wrapper around `Jido.Browser.Actions.Navigate` that serializes execution
   and stores the updated browser session in `BrowserSessionStore` after
   a successful navigation.
 
@@ -22,13 +22,13 @@ defmodule Goodwizard.Actions.Browser.Navigate do
 
   alias Goodwizard.Browser.Serializer
   alias Goodwizard.BrowserSessionStore
-  alias JidoBrowser.Actions.Navigate, as: JidoNavigate
+  alias Jido.Browser.Actions.Navigate, as: JidoNavigate
 
   @impl true
   def run(params, context) do
     Serializer.execute(fn ->
       case JidoNavigate.run(params, context) do
-        {:ok, %{session: %JidoBrowser.Session{} = session} = result} ->
+        {:ok, %{session: %Jido.Browser.Session{} = session} = result} ->
           maybe_store_session(context[:agent_id], session)
           {:ok, result}
 

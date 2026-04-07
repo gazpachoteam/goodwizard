@@ -1,5 +1,5 @@
 defmodule Goodwizard.Actions.Browser.WaitForNavigation do
-  @moduledoc "Serialized wrapper around `JidoBrowser.Actions.WaitForNavigation`."
+  @moduledoc "Serialized wrapper around `Jido.Browser.Actions.WaitForNavigation`."
 
   use Jido.Action,
     name: "browser_wait_for_navigation",
@@ -16,5 +16,5 @@ defmodule Goodwizard.Actions.Browser.WaitForNavigation do
 
   @impl true
   def run(params, context),
-    do: Helpers.run_serialized(JidoBrowser.Actions.WaitForNavigation, params, context)
+    do: Helpers.run_serialized(Jido.Browser.Actions.WaitForNavigation, params, context)
 end

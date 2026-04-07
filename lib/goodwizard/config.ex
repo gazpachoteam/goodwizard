@@ -286,14 +286,14 @@ defmodule Goodwizard.Config do
     adapter_module =
       case adapter_name do
         "vibium" ->
-          JidoBrowser.Adapters.Vibium
+          Jido.Browser.Adapters.Vibium
 
         "playwright" ->
-          JidoBrowser.Adapters.Playwright
+          Jido.Browser.Adapters.Playwright
 
         other ->
           Logger.warning("Unknown browser adapter #{inspect(other)}, falling back to Vibium")
-          JidoBrowser.Adapters.Vibium
+          Jido.Browser.Adapters.Vibium
       end
 
     Application.put_env(:jido_browser, :adapter, adapter_module)

@@ -34,7 +34,7 @@ defmodule Goodwizard.Actions.Browser.Snapshot do
   require Logger
 
   alias Goodwizard.Browser.Serializer
-  alias JidoBrowser.Actions.Evaluate
+  alias Jido.Browser.Actions.Evaluate
 
   # Markers that delimit the JSON in clicker output. Chosen to be
   # unlikely to appear in page content, log lines, or JS source.

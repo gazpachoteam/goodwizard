@@ -7,7 +7,7 @@ defmodule Goodwizard.Agent do
   via `Goodwizard.Character.Hydrator` to pick up bootstrap file changes.
   """
 
-  use Jido.AI.ReActAgent,
+  use Jido.AI.Agent,
     name: "goodwizard",
     description: "Personal AI assistant",
     tools: [
@@ -47,7 +47,7 @@ defmodule Goodwizard.Agent do
       Goodwizard.Actions.Scheduling.ListOneTimeJobs,
       # Heartbeat
       Goodwizard.Actions.Heartbeat.UpdateChecks,
-      # Browser (serialized wrappers around JidoBrowser.Actions.*)
+      # Browser (serialized wrappers around Jido.Browser.Actions.*)
       Goodwizard.Actions.Browser.Navigate,
       Goodwizard.Actions.Browser.Back,
       Goodwizard.Actions.Browser.Forward,
@@ -99,7 +99,7 @@ defmodule Goodwizard.Agent do
       Goodwizard.Plugins.Memory,
       Goodwizard.Plugins.PromptSkills,
       Goodwizard.Plugins.ScheduledTaskScheduler,
-      {JidoBrowser.Plugin, [headless: true]}
+      {Jido.Browser.Plugin, [headless: true]}
     ]
 
   require Logger

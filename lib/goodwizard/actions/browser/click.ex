@@ -1,5 +1,5 @@
 defmodule Goodwizard.Actions.Browser.Click do
-  @moduledoc "Serialized wrapper around `JidoBrowser.Actions.Click`."
+  @moduledoc "Serialized wrapper around `Jido.Browser.Actions.Click`."
 
   use Jido.Action,
     name: "browser_click",
@@ -16,5 +16,5 @@ defmodule Goodwizard.Actions.Browser.Click do
   alias Goodwizard.Actions.Browser.Helpers
 
   @impl true
-  def run(params, context), do: Helpers.run_serialized(JidoBrowser.Actions.Click, params, context)
+  def run(params, context), do: Helpers.run_serialized(Jido.Browser.Actions.Click, params, context)
 end

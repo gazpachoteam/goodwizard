@@ -1,5 +1,5 @@
 defmodule Goodwizard.Actions.Browser.Back do
-  @moduledoc "Serialized wrapper around `JidoBrowser.Actions.Back`."
+  @moduledoc "Serialized wrapper around `Jido.Browser.Actions.Back`."
 
   use Jido.Action,
     name: "browser_back",
@@ -14,5 +14,5 @@ defmodule Goodwizard.Actions.Browser.Back do
   alias Goodwizard.Actions.Browser.Helpers
 
   @impl true
-  def run(params, context), do: Helpers.run_serialized(JidoBrowser.Actions.Back, params, context)
+  def run(params, context), do: Helpers.run_serialized(Jido.Browser.Actions.Back, params, context)
 end

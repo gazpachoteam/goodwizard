@@ -1,5 +1,5 @@
 defmodule Goodwizard.Actions.Browser.Hover do
-  @moduledoc "Serialized wrapper around `JidoBrowser.Actions.Hover`."
+  @moduledoc "Serialized wrapper around `Jido.Browser.Actions.Hover`."
 
   use Jido.Action,
     name: "browser_hover",
@@ -15,5 +15,5 @@ defmodule Goodwizard.Actions.Browser.Hover do
   alias Goodwizard.Actions.Browser.Helpers
 
   @impl true
-  def run(params, context), do: Helpers.run_serialized(JidoBrowser.Actions.Hover, params, context)
+  def run(params, context), do: Helpers.run_serialized(Jido.Browser.Actions.Hover, params, context)
 end

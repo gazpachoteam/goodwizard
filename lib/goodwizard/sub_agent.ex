@@ -9,7 +9,7 @@ defmodule Goodwizard.SubAgent do
 
   @dialyzer {:nowarn_function, plugin_specs: 0}
 
-  use Jido.AI.ReActAgent,
+  use Jido.AI.Agent,
     name: "goodwizard_subagent",
     description: "Focused background agent for file processing and research tasks",
     tools: [

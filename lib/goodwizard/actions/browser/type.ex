@@ -1,5 +1,5 @@
 defmodule Goodwizard.Actions.Browser.Type do
-  @moduledoc "Serialized wrapper around `JidoBrowser.Actions.Type`."
+  @moduledoc "Serialized wrapper around `Jido.Browser.Actions.Type`."
 
   use Jido.Action,
     name: "browser_type",
@@ -17,5 +17,5 @@ defmodule Goodwizard.Actions.Browser.Type do
   alias Goodwizard.Actions.Browser.Helpers
 
   @impl true
-  def run(params, context), do: Helpers.run_serialized(JidoBrowser.Actions.Type, params, context)
+  def run(params, context), do: Helpers.run_serialized(Jido.Browser.Actions.Type, params, context)
 end

@@ -1,5 +1,5 @@
 defmodule Goodwizard.Actions.Browser.Focus do
-  @moduledoc "Serialized wrapper around `JidoBrowser.Actions.Focus`."
+  @moduledoc "Serialized wrapper around `Jido.Browser.Actions.Focus`."
 
   use Jido.Action,
     name: "browser_focus",
@@ -15,5 +15,5 @@ defmodule Goodwizard.Actions.Browser.Focus do
   alias Goodwizard.Actions.Browser.Helpers
 
   @impl true
-  def run(params, context), do: Helpers.run_serialized(JidoBrowser.Actions.Focus, params, context)
+  def run(params, context), do: Helpers.run_serialized(Jido.Browser.Actions.Focus, params, context)
 end

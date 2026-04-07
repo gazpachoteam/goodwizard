@@ -1,5 +1,5 @@
 defmodule Goodwizard.Actions.Browser.Reload do
-  @moduledoc "Serialized wrapper around `JidoBrowser.Actions.Reload`."
+  @moduledoc "Serialized wrapper around `Jido.Browser.Actions.Reload`."
 
   use Jido.Action,
     name: "browser_reload",
@@ -15,5 +15,5 @@ defmodule Goodwizard.Actions.Browser.Reload do
 
   @impl true
   def run(params, context),
-    do: Helpers.run_serialized(JidoBrowser.Actions.Reload, params, context)
+    do: Helpers.run_serialized(Jido.Browser.Actions.Reload, params, context)
 end

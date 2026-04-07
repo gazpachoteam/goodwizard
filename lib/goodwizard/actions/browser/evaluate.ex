@@ -1,5 +1,5 @@
 defmodule Goodwizard.Actions.Browser.Evaluate do
-  @moduledoc "Serialized wrapper around `JidoBrowser.Actions.Evaluate`."
+  @moduledoc "Serialized wrapper around `Jido.Browser.Actions.Evaluate`."
 
   use Jido.Action,
     name: "browser_evaluate",
@@ -16,5 +16,5 @@ defmodule Goodwizard.Actions.Browser.Evaluate do
 
   @impl true
   def run(params, context),
-    do: Helpers.run_serialized(JidoBrowser.Actions.Evaluate, params, context)
+    do: Helpers.run_serialized(Jido.Browser.Actions.Evaluate, params, context)
 end

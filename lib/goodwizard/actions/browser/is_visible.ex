@@ -1,5 +1,5 @@
 defmodule Goodwizard.Actions.Browser.IsVisible do
-  @moduledoc "Serialized wrapper around `JidoBrowser.Actions.IsVisible`."
+  @moduledoc "Serialized wrapper around `Jido.Browser.Actions.IsVisible`."
 
   use Jido.Action,
     name: "browser_is_visible",
@@ -15,5 +15,5 @@ defmodule Goodwizard.Actions.Browser.IsVisible do
 
   @impl true
   def run(params, context),
-    do: Helpers.run_serialized(JidoBrowser.Actions.IsVisible, params, context)
+    do: Helpers.run_serialized(Jido.Browser.Actions.IsVisible, params, context)
 end

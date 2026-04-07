@@ -1,6 +1,6 @@
 defmodule Goodwizard.Actions.Browser.Scroll do
   @moduledoc """
-  Wrapper around `JidoBrowser.Actions.Scroll` with serialized execution
+  Wrapper around `Jido.Browser.Actions.Scroll` with serialized execution
   and string-to-atom coercion for the `direction` parameter.
   """
 
@@ -28,7 +28,7 @@ defmodule Goodwizard.Actions.Browser.Scroll do
 
   @impl true
   def run(params, context) do
-    Helpers.run_serialized(JidoBrowser.Actions.Scroll, params, context,
+    Helpers.run_serialized(Jido.Browser.Actions.Scroll, params, context,
       coerce: [{:direction, @direction_atoms}]
     )
   end

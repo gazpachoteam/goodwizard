@@ -1,5 +1,5 @@
 defmodule Goodwizard.Actions.Browser.SelectOption do
-  @moduledoc "Serialized wrapper around `JidoBrowser.Actions.SelectOption`."
+  @moduledoc "Serialized wrapper around `Jido.Browser.Actions.SelectOption`."
 
   use Jido.Action,
     name: "browser_select_option",
@@ -18,5 +18,5 @@ defmodule Goodwizard.Actions.Browser.SelectOption do
 
   @impl true
   def run(params, context),
-    do: Helpers.run_serialized(JidoBrowser.Actions.SelectOption, params, context)
+    do: Helpers.run_serialized(Jido.Browser.Actions.SelectOption, params, context)
 end

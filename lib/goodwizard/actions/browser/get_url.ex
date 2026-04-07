@@ -1,5 +1,5 @@
 defmodule Goodwizard.Actions.Browser.GetUrl do
-  @moduledoc "Serialized wrapper around `JidoBrowser.Actions.GetUrl`."
+  @moduledoc "Serialized wrapper around `Jido.Browser.Actions.GetUrl`."
 
   use Jido.Action,
     name: "browser_get_url",
@@ -15,5 +15,5 @@ defmodule Goodwizard.Actions.Browser.GetUrl do
 
   @impl true
   def run(params, context),
-    do: Helpers.run_serialized(JidoBrowser.Actions.GetUrl, params, context)
+    do: Helpers.run_serialized(Jido.Browser.Actions.GetUrl, params, context)
 end

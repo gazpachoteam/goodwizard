@@ -20,14 +20,14 @@ defmodule Goodwizard.BrowserSessionStore do
   end
 
   @doc "Store a browser session for the given agent."
-  @spec put(String.t(), JidoBrowser.Session.t()) :: :ok
-  def put(agent_id, %JidoBrowser.Session{} = session) do
+  @spec put(String.t(), Jido.Browser.Session.t()) :: :ok
+  def put(agent_id, %Jido.Browser.Session{} = session) do
     :ets.insert(@table, {agent_id, session})
     :ok
   end
 
   @doc "Retrieve the latest browser session for the given agent. Returns nil on miss."
-  @spec get(String.t()) :: JidoBrowser.Session.t() | nil
+  @spec get(String.t()) :: Jido.Browser.Session.t() | nil
   def get(agent_id) do
     case :ets.lookup(@table, agent_id) do
       [{^agent_id, session}] -> session

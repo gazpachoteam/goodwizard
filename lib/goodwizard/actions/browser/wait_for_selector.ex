@@ -1,6 +1,6 @@
 defmodule Goodwizard.Actions.Browser.WaitForSelector do
   @moduledoc """
-  Wrapper around `JidoBrowser.Actions.WaitForSelector` with serialized execution
+  Wrapper around `Jido.Browser.Actions.WaitForSelector` with serialized execution
   and string-to-atom coercion for the `state` parameter.
   """
 
@@ -31,7 +31,7 @@ defmodule Goodwizard.Actions.Browser.WaitForSelector do
 
   @impl true
   def run(params, context) do
-    Helpers.run_serialized(JidoBrowser.Actions.WaitForSelector, params, context,
+    Helpers.run_serialized(Jido.Browser.Actions.WaitForSelector, params, context,
       coerce: [{:state, @state_atoms}]
     )
   end

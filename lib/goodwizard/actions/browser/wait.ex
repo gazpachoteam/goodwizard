@@ -1,5 +1,5 @@
 defmodule Goodwizard.Actions.Browser.Wait do
-  @moduledoc "Serialized wrapper around `JidoBrowser.Actions.Wait`."
+  @moduledoc "Serialized wrapper around `Jido.Browser.Actions.Wait`."
 
   use Jido.Action,
     name: "browser_wait",
@@ -14,5 +14,5 @@ defmodule Goodwizard.Actions.Browser.Wait do
   alias Goodwizard.Actions.Browser.Helpers
 
   @impl true
-  def run(params, context), do: Helpers.run_serialized(JidoBrowser.Actions.Wait, params, context)
+  def run(params, context), do: Helpers.run_serialized(Jido.Browser.Actions.Wait, params, context)
 end

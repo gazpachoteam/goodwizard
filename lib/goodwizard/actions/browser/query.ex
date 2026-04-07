@@ -1,5 +1,5 @@
 defmodule Goodwizard.Actions.Browser.Query do
-  @moduledoc "Serialized wrapper around `JidoBrowser.Actions.Query`."
+  @moduledoc "Serialized wrapper around `Jido.Browser.Actions.Query`."
 
   use Jido.Action,
     name: "browser_query",
@@ -15,5 +15,5 @@ defmodule Goodwizard.Actions.Browser.Query do
   alias Goodwizard.Actions.Browser.Helpers
 
   @impl true
-  def run(params, context), do: Helpers.run_serialized(JidoBrowser.Actions.Query, params, context)
+  def run(params, context), do: Helpers.run_serialized(Jido.Browser.Actions.Query, params, context)
 end

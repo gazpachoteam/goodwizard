@@ -1,5 +1,5 @@
 defmodule Goodwizard.Actions.Browser.GetText do
-  @moduledoc "Serialized wrapper around `JidoBrowser.Actions.GetText`."
+  @moduledoc "Serialized wrapper around `Jido.Browser.Actions.GetText`."
 
   use Jido.Action,
     name: "browser_get_text",
@@ -16,5 +16,5 @@ defmodule Goodwizard.Actions.Browser.GetText do
 
   @impl true
   def run(params, context),
-    do: Helpers.run_serialized(JidoBrowser.Actions.GetText, params, context)
+    do: Helpers.run_serialized(Jido.Browser.Actions.GetText, params, context)
 end

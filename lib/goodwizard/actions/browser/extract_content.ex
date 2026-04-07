@@ -1,6 +1,6 @@
 defmodule Goodwizard.Actions.Browser.ExtractContent do
   @moduledoc """
-  Wrapper around `JidoBrowser.Actions.ExtractContent` with serialized execution
+  Wrapper around `Jido.Browser.Actions.ExtractContent` with serialized execution
   and string-to-atom coercion for the `format` parameter.
 
   The upstream schema expects `{:in, [:markdown, :html]}` but the LLM sends
@@ -25,7 +25,7 @@ defmodule Goodwizard.Actions.Browser.ExtractContent do
 
   @impl true
   def run(params, context) do
-    Helpers.run_serialized(JidoBrowser.Actions.ExtractContent, params, context,
+    Helpers.run_serialized(Jido.Browser.Actions.ExtractContent, params, context,
       coerce: [{:format, @format_atoms}]
     )
   end
