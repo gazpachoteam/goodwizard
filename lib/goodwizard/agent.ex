@@ -92,7 +92,7 @@ defmodule Goodwizard.Agent do
       Goodwizard.Actions.Brain.Legacy.ListEntityTypes,
       Goodwizard.Actions.Brain.RefreshTools
     ],
-    model: "anthropic:claude-sonnet-4-5",
+    model: "openai:gpt-4o",
     max_iterations: 20,
     plugins: [
       Goodwizard.Plugins.Session,
